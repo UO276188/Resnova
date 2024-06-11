@@ -1,84 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Footer Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sara María Ramírez Pérez">
+    <title>OMODA 5</title>
     <style>
-    body {
-        font-family: Arial, sans-serif; /* Ajusta la tipografía según la imagen */
-        background-color: #000000; 
-        color: #FFFFFF;
-
-        
-    }
-    .footer {
-        
-        padding: 20px;
-        text-align: center;
-        color: #FFFFFF;
-    }
-    .footer h3 {
-        font-family: astrike, sans-serif;
-        margin: 0;
-        padding-bottom: 10px;
-        padding-top: 20px;
-    }
+        body {
+            font-family: Arial, sans-serif;
     
-    .footer p {
-        margin: 0;
-        padding-top: 10px;
-    }
-    
-    .imagen-encabezado{
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .imagen-encabezado img{
-        width: 20em   ;
-        padding: 15px;
-    }
-    section{
-        position: relative;
-        width: 630px; /* Ajusta al tamaño deseado */
-        height: auto; /* Ajusta al tamaño deseado */
-        background-image: url('https://i.postimg.cc/JzssK5Vq/mail.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .texto{
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
-    }
+            text-align: center;
+            
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
 
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background-color: black;
+        }
+
+        footer {
+            padding: 20px;  
+        }
+
+        footer h3 {
+            font-family: astrike, sans-serif;
+            margin: 0;
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        .imagen-encabezado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagen-encabezado img {
+            width: 20em;
+            padding: 15px;
+        }
+
+        section {
+            padding: 20px;
+            border: 1.25em;
+            font-family: "Source Sans Pro", Sans-serif;
+            position: relative;
+            height: auto;
+            justify-items: center;
+        }
+
+        section h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        section p{
+            border: 1.25em;
+            justify-self: center;
+        }
+       
+        .fondo{
+            background-image: url("https://omodaresnova.com/images/azul.png");
+            background-size: contain;
+        }
+        .difuminado{
+            background-color: rgba(0, 0, 0, 0.50);
+        }
+        .sorteo{
+            padding: 0.5em;
+            background-color: rgba(192, 192, 192, 0.75);
+            color: black;
+            font-size: 1.2em;
+        }
+        button{
+            background-color: #108346;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.25em;
+            border: none;
+            border-radius: 0.25em;
+            text-decoration: none; /* Sin subrayado */
+            display: inline-block; /* Display en línea */
+            transition: background-color 0.3s ease; /* Transición suave para el hover */
+            cursor: pointer; /* Cursor tipo puntero */
+        }
+        img {
+            width: 85%;
+        }
     </style>
 </head>
-<body>
-    <div class="imagen-encabezado">
-        <img src="https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2.png" class="attachment-large size-large wp-image-569" alt="" srcset="https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2.png 431w, https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2-300x81.png 300w">
-    </div>
-    <section>
-        <div class="texto">
-            <h1> Descubre el nuevo OMODA 5</h1>
-            <p>Solo por ser empleado del grupo Resnova, ven a conocerlo y entra en el sorteo de un fin de semana.</p>
-        </div>
-       
-    </section>
-    
-    
- 
-    <footer class="footer">
-    <h3>SOBRE NOSOTROS</h3>
-    <h3>NUESTROS MODELOS</h3>
-    <h3>CONTACTA</h3>
-    <p>©2024 OMODA Resnova Motor. Reservados todos los derechos</p>
-    </footer>
 
+<body>
+    <div class="container">
+        <div class="imagen-encabezado">
+            <img src="https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2.png"
+                class="attachment-large size-large wp-image-569" alt="encabezado">
+                <!--<img src="https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2.png"
+                class="attachment-large size-large wp-image-569" alt="encabezado"
+                srcset="https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2.png 431w, https://omodaresnovamotor.com/wp-content/uploads/2024/01/logo-omoda-blanco2-300x81.png 300w">-->
+        </div>
+
+        <div class="fondo">
+            <div class="difuminado">
+                <section>
+                    <img src="https://omodaresnova.com/images/Omoda5.png" alt="Omoda5">
+                    <h1>OMODA 5 EL FUTURO HA LLEGADO EN FORMA DE SUV</h1>
+                    <p>Un universo de diseño excepcional y tecnologías innovadoras. Descubre una experiencia única y donde unimos fuerzas para crear algo completamente nuevo. </p>
+                    <p>Descubre todo sobre OMODA.</p>
+                    <img src="https://omodaresnova.com/images/interior.jpg" alt="interior">
+                    
+                    <div class="sorteo">
+                        <p>Solo por ser empleado de</p>
+                        <img src="https://omodaresnova.com/images/logo-grupo.png" alt="logo">
+                        <p><b>ven a probarlo</b> y entra en el <b>sorteo</b> de un fin de semana con el nuevo <b>OMODA 5</b></p> 
+                        <button>¡Participa en el sorteo!</button>
+                    </div>                 
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <h3>SOBRE NOSOTROS</h3>
+            <h3>NUESTROS MODELOS</h3>
+            <h3>CONTACTA</h3>
+            <p>©2024 OMODA Resnova Motor. Reservados todos los derechos</p>
+        </footer>
+    </div>
 </body>
 </html>
