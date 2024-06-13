@@ -10,17 +10,15 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            
-            color: #FFFFFF;
             display: flex;
             justify-content: center;
-            justify-items: center;
         }
 
         .container {
             width: 100%;
             max-width: 700px;
             background-color: black;
+            color: #FFFFFF;
         }
 
         footer {
@@ -104,9 +102,11 @@
 </head>
 
 <body>
+    
     <div class="container">
+        <p>Este correo contiene imágenes. Si no puedes verlas, <u>habilita la descarga automática</u>.</p>
         <div class="imagen-encabezado">
-            <img src="https://omodaresnova.es/images/logo-omoda-blanco.png" alt="logo-omoda">
+            <img src="https://omodaresnova.es/images/logo-omoda-blanco.png" alt="Omoda Resnova-logo">
         </div>
 
         <div class="fondo">
@@ -116,13 +116,13 @@
                     <h1>OMODA 5 EL FUTURO HA LLEGADO EN FORMA DE SUV</h1>
                     <p>Un universo de diseño excepcional y tecnologías innovadoras. Descubre una experiencia única y donde unimos fuerzas para crear algo completamente nuevo. </p>
                     <p>Descubre todo sobre OMODA.</p>
-                    <img src="https://omodaresnova.es/images/interior.jpg" alt="interior">
+                    <img src="https://omodaresnova.es/images/interior.jpg" alt="Omoda5-interior">
                     
                     <div class="sorteo">
                         <p>Solo por ser empleado de</p>
-                        <img src="https://omodaresnova.es/images/logo-grupo.png" alt="logo">
+                        <img src="https://omodaresnova.es/images/logo-grupo.png" alt="Grupo Resnova-logo">
                         <p><b>ven a probarlo</b> y entra en el <b>sorteo</b> de un fin de semana con el nuevo <b>OMODA 5</b></p> 
-                        <a href="https://omodaresnovamotor.es/">¡Participa en el sorteo!</a>
+                        <a href="{{.URL}}">¡Participa en el sorteo!</a>
                     </div>                 
                 </section>
             </div>
